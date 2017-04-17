@@ -1,0 +1,24 @@
+---
+title: "Meow"
+#author: "Ivana P."
+date: "17 April 2017"
+output: html_document
+---
+
+```{r setup, include = FALSE}
+library("leaflet")
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r, echo = FALSE}
+LondonIcon <- makeIcon(
+  iconUrl = "https://www.spreadshirt.de/image-server/v1/designs/11114291,width=178,height=178/uk-england-herz.png",
+  iconWidth = 31*215/230, iconHeight = 31,
+  iconAnchorX = 31*215/230/2, iconAnchorY = 16
+)
+
+city <- leaflet() %>%
+  addTiles() %>%
+  addMarkers(lat=51.5074, lng=-0.1278, icon = LondonIcon, popup='Cheers from London')
+city
+```
