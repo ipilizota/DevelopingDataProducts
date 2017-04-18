@@ -19,6 +19,6 @@ LondonIcon <- makeIcon(
 
 city <- leaflet() %>%
   addTiles() %>%
-  addMarkers(lat=51.5074, lng=-0.1278, icon = LondonIcon, popup='Cheers from London')
+  addMarkers(lat=51.5074, lng=-0.1278, icon = LondonIcon, popup='Cheers from London!')
 city
 ```
