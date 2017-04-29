@@ -1,0 +1,23 @@
+---
+title: "Meow"
+#author: "Ivana P."
+date: "29 April 2017"
+output: ioslides_presentation
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+## Cats data
+
+```{r echo = FALSE, fig.align = 'center', message = FALSE, warning = FALSE}
+library("plotly")
+library("MASS")
+data(cats)
+
+p <- plot_ly(data=cats, x=~Bwt, y=~Hwt, type="scatter", mode="markers", color=~factor(Sex)) %>% 
+  layout(xaxis = list(title = "Body weight in kg"), 
+         yaxis = list(title = "Heart weight in g"))
+p
+```
